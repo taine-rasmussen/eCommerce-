@@ -2,6 +2,7 @@
   width: 20%;
   height: 100vh;
   box-shadow: 1.5px 1.5px 15px;
+  padding: 5px;
 }
 
 .sidebar_header {
@@ -41,6 +42,7 @@
   flex-wrap: wrap;
   overflow: hidden;
   transition: 0.3s;
+  border-radius: 10px;
 }
 
 .sidebar_item {
