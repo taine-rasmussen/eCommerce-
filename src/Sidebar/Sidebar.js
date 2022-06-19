@@ -36,10 +36,12 @@ const Sidebar = (props) => {
   return (
     <div className='sidebar_container'>
       <div className='sidebar_header'>
-        <IoLogoIonic style={{ fontSize: '2rem' }} />
+        <IoLogoIonic
+          style={{ fontSize: '2rem' }}
+          onClick={() => setActiveMenu(!activeMenu)}
+        />
         <h2>Shoppy</h2>
       </div>
-
       <div
         className='sidebar_menu_container'
       >
