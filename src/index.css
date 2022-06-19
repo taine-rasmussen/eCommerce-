@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background: #fafbfb;
+}
+
+.app {
+  border: 3px solid #000;
+  height: 100vh;
+}
+
+.active_menu {
+  width: 20%;
+  height: 100vh;
+  box-shadow: 1.5px 1.5px 15px;
+}
+
+.no_active_menu {
+  width: 0;
+}
