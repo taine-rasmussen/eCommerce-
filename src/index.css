@@ -1,16 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
 body {
   margin: 0;
   background: #fafbfb;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 .app {
   height: 100vh;
-}
-
-.active_menu {
-  width: 20%;
-  height: 100vh;
-  box-shadow: 1.5px 1.5px 15px;
 }
 
 .menu_icon:hover {
