@@ -7,7 +7,7 @@ import Sidebar from './Sidebar/Sidebar'
 
 function App() {
 
-  const [activeMenu, setActiveMenu] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(true);
 
   return (
     <div className="app">
@@ -26,6 +26,10 @@ function App() {
           </div>
         )
       }
+      <GiHamburgerMenu
+        className='menu_icon'
+        onClick={() => setActiveMenu(!activeMenu)}
+      />
     </div >
   );
 }
