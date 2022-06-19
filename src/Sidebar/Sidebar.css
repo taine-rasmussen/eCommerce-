@@ -3,3 +3,44 @@
   height: 100vh;
   box-shadow: 1.5px 1.5px 15px;
 }
+
+.sidebar_header {
+  width: 100%;
+  border: 1px solid #000;
+  display: flex;
+}
+
+.sidebar_menu_container {
+  width: 100%;
+}
+
+.sidebar_section {
+}
+
+.sidebar_section h2 {
+  font-size: 1rem;
+  margin-left: 20px;
+  color: #9ba3af;
+  font-weight: 400;
+}
+
+.sidebar_content {
+  width: auto;
+  /* margin-left: 30px; */
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.sidebar_item {
+  margin: 15px 5px;
+}
+
+.sidebar_content:hover {
+  background: blue;
+  transition: 0.5s;
+  cursor: pointer;
+}
