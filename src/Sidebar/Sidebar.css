@@ -6,8 +6,16 @@
 
 .sidebar_header {
   width: 100%;
-  border: 1px solid #000;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.sidebar_header h2 {
+  font-size: 1.75rem;
+  padding-left: 20px;
 }
 
 .sidebar_menu_container {

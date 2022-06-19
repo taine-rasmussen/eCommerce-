@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdPeopleOutline } from 'react-icons/md'
 import { BsLayoutTextSidebarReverse, BsKanban } from 'react-icons/bs'
 import { FaRegEdit } from 'react-icons/fa'
+import { IoLogoIonic } from 'react-icons/io'
 import './Sidebar.css'
 
 
@@ -13,21 +14,6 @@ const Sidebar = (props) => {
     setActiveMenu,
     activeMenu
   } = props
-
-  const dashboard = [
-    { title: 'Ecommerce', icon: <HiOutlineShoppingBag /> }
-  ];
-  const pages = [
-    { title: 'Orders', icon: <AiOutlineShoppingCart /> },
-    { title: 'Employees', icon: <MdPeopleOutline /> },
-    { title: 'Customers', icon: <BsLayoutTextSidebarReverse /> }
-  ];
-  const apps = [
-    { title: 'Calender', icon: <AiOutlineCalendar /> },
-    { title: 'KanBan', icon: <BsKanban /> },
-    { title: 'Editor', icon: <FaRegEdit /> },
-    { title: 'Orders', icon: <AiOutlineFormatPainter /> }
-  ]
 
   const sidebarData = [
     [
@@ -54,7 +40,8 @@ const Sidebar = (props) => {
         onClick={() => setActiveMenu(!activeMenu)}
       />
       <div className='sidebar_header'>
-        header goes here
+        <IoLogoIonic style={{ fontSize: '2rem' }} />
+        <h2>Shoppy</h2>
       </div>
 
       <div
