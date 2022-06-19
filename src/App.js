@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './index.css'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
+// Components
+import Sidebar from './Sidebar/Sidebar'
+
 function App() {
 
   const [activeMenu, setActiveMenu] = useState(false);
@@ -10,14 +13,10 @@ function App() {
     <div className="app">
       {activeMenu
         ? (
-          <div
-            className="active_menu"
-            style={{ backgroundColor: '#fff' }}
-          >
-            <GiHamburgerMenu
-              onClick={() => setActiveMenu(!activeMenu)}
-            />
-          </div>
+          <Sidebar
+            setActiveMenu={setActiveMenu}
+            activeMenu={activeMenu}
+          />
         ) : (
           <div className="no_active_menu">
             <GiHamburgerMenu
@@ -26,7 +25,7 @@ function App() {
           </div>
         )
       }
-    </div>
+    </div >
   );
 }
 
