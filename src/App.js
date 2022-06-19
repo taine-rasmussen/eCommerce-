@@ -20,6 +20,7 @@ function App() {
         ) : (
           <div className="no_active_menu">
             <GiHamburgerMenu
+              className='menu_icon'
               onClick={() => setActiveMenu(!activeMenu)}
             />
           </div>

@@ -35,17 +35,40 @@ const Sidebar = (props) => {
   return (
     <div className='active_menu'>
       <GiHamburgerMenu
+        className='menu_icon'
         onClick={() => setActiveMenu(!activeMenu)}
       />
       <div className='sidebar_header'>
         header goes here
       </div>
-      <div
-      >
-
+      <div className='sidebar_section'>
+        <h2>Dashboard</h2>
+        {dashboard.map((data) => (
+          <div className='sidevbar_content' key={data.title}>
+            {data.icon}
+            {data.title}
+          </div>
+        ))}
       </div>
-
-    </div>
+      <div className='sidebar_section'>
+        <h2>Pages</h2>
+        {pages.map((data) => (
+          <div className='sidevbar_content' key={data.title}>
+            {data.icon}
+            {data.title}
+          </div>
+        ))}
+      </div>
+      <div className='sidebar_section'>
+        <h2>Apps</h2>
+        {apps.map((data) => (
+          <div className='sidevbar_content' key={data.title}>
+            {data.icon}
+            {data.title}
+          </div>
+        ))}
+      </div>
+    </div >
   )
 }
 

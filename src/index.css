@@ -13,14 +13,10 @@ body {
   box-shadow: 1.5px 1.5px 15px;
 }
 
-.active_menu:hover {
+.menu_icon:hover {
   cursor: pointer;
 }
 
 .no_active_menu {
   width: 0;
-}
-
-.no_active_menu:hover {
-  cursor: pointer;
 }
