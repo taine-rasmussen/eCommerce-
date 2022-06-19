@@ -35,10 +35,6 @@ const Sidebar = (props) => {
 
   return (
     <div className='sidebar_container'>
-      <GiHamburgerMenu
-        className='menu_icon'
-        onClick={() => setActiveMenu(!activeMenu)}
-      />
       <div className='sidebar_header'>
         <IoLogoIonic style={{ fontSize: '2rem' }} />
         <h2>Shoppy</h2>

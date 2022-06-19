@@ -26,6 +26,10 @@ function App() {
           </div>
         )
       }
+      <GiHamburgerMenu
+        className='menu_icon'
+        onClick={() => setActiveMenu(!activeMenu)}
+      />
     </div >
   );
 }

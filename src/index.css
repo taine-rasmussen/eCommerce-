@@ -9,6 +9,13 @@ body {
 
 .app {
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu_icon {
+  margin: 25px 25px;
+  font-size: 1.5rem;
 }
 
 .menu_icon:hover {
