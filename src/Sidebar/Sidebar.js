@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdPeopleOutline } from 'react-icons/md'
 import { BsLayoutTextSidebarReverse, BsKanban } from 'react-icons/bs'
 import { FaRegEdit } from 'react-icons/fa'
+import './Sidebar.css'
 
 
 const Sidebar = (props) => {
@@ -13,23 +14,22 @@ const Sidebar = (props) => {
     activeMenu
   } = props
 
+  const dashboard = [
+    { title: 'Ecommerce', icon: <HiOutlineShoppingBag /> }
+  ];
 
-  const sideBarData = [{
-    dashboard: [
-      { title: 'Ecommerce', icon: <HiOutlineShoppingBag /> }
-    ],
-    pages: [
-      { title: 'Orders', icon: <AiOutlineShoppingCart /> },
-      { title: 'Employees', icon: <MdPeopleOutline /> },
-      { title: 'Customers', icon: <BsLayoutTextSidebarReverse /> },
-    ],
-    apps: [
-      { title: 'Calender', icon: <AiOutlineCalendar /> },
-      { title: 'KanBan', icon: <BsKanban /> },
-      { title: 'Editor', icon: <FaRegEdit /> },
-      { title: 'Orders', icon: <AiOutlineFormatPainter /> },
-    ]
-  }]
+  const pages = [
+    { title: 'Orders', icon: <AiOutlineShoppingCart /> },
+    { title: 'Employees', icon: <MdPeopleOutline /> },
+    { title: 'Customers', icon: <BsLayoutTextSidebarReverse /> }
+  ];
+
+  const apps = [
+    { title: 'Calender', icon: <AiOutlineCalendar /> },
+    { title: 'KanBan', icon: <BsKanban /> },
+    { title: 'Editor', icon: <FaRegEdit /> },
+    { title: 'Orders', icon: <AiOutlineFormatPainter /> }
+  ]
 
 
   return (
@@ -37,6 +37,14 @@ const Sidebar = (props) => {
       <GiHamburgerMenu
         onClick={() => setActiveMenu(!activeMenu)}
       />
+      <div className='sidebar_header'>
+        header goes here
+      </div>
+      <div
+      >
+
+      </div>
+
     </div>
   )
 }
