@@ -1,6 +1,6 @@
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { useContext } from 'react'
 import { AdminContext } from '../AdminContext'
+import { useContext } from 'react'
 
 const SidebarHamburger = () => {
   const {

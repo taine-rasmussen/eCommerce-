@@ -1,18 +1,17 @@
 import { Routes, Route } from "react-router-dom";
-import React from 'react'
+import ColourPicker from '../ColourPicker/ColourPicker'
 import Ecommerce from '../Ecommerce/Ecommerce'
-import Orders from '../Orders/Orders'
-import Employees from '../Employees/Employees'
 import Customers from '../Customers/Customers'
+import Employees from '../Employees/Employees'
 import Calender from '../Calender/Calender'
+import Orders from '../Orders/Orders'
 import KanBan from '../KanBan/KanBan'
 import Editor from '../Editor/Editor'
-import ColourPicker from '../ColourPicker/ColourPicker'
-
+import React from 'react'
 
 const Body = () => {
    return (
-      <div>
+      <div className='body'>
          <Routes>
             <Route path="/" element={<Ecommerce />} />
             <Route path="orders" element={<Orders />} />
