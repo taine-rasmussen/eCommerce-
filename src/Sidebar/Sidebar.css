@@ -47,6 +47,8 @@
 
 .sidebar_item {
   margin: 15px 5px;
+  text-decoration: none;
+  color: #000;
 }
 
 .sidebar_content:hover {

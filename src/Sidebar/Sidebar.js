@@ -51,7 +51,10 @@ const Sidebar = () => {
               {i === 0 ? <h2>DASHBOARD</h2> : i === 1 ? <h2>PAGES</h2> : <h2>APPS</h2>}
               {section.map((data) => (
                 <>
-                  <Link to={data.title.toLowerCase()}>
+                  <Link
+                    to={data.title.toLowerCase()}
+                    style={{ textDecoration: 'none' }}
+                  >
                     <div className='sidebar_content' key={data.title}>
                       <div className='sidebar_item'>
                         {data.icon}
