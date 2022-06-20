@@ -1,8 +1,5 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import React from 'react'
-
-
-// Components
 import Ecommerce from '../Ecommerce/Ecommerce'
 import Orders from '../Orders/Orders'
 import Employees from '../Employees/Employees'
@@ -19,6 +16,12 @@ const Body = () => {
          <Routes>
             <Route path="/" element={<Ecommerce />} />
             <Route path="orders" element={<Orders />} />
+            <Route path="Employees" element={<Employees />} />
+            <Route path="Customers" element={<Customers />} />
+            <Route path="Calender" element={<Calender />} />
+            <Route path="KanBan" element={<KanBan />} />
+            <Route path="Editor" element={<Editor />} />
+            <Route path="ColourPicker" element={<ColourPicker />} />
          </Routes>
       </div>
    )

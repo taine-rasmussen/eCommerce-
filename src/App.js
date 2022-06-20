@@ -1,16 +1,7 @@
 import { useState } from 'react'
 import './index.css'
-// Components
 import Sidebar from './Sidebar/Sidebar'
 import SidebarHamburger from './Sidebar/SidebarHamburger'
-import Ecommerce from './Ecommerce/Ecommerce'
-import Orders from './Orders/Orders'
-import Employees from './Employees/Employees'
-import Customers from './Customers/Customers'
-import Calender from './Calender/Calender'
-import KanBan from './KanBan/KanBan'
-import Editor from './Editor/Editor'
-import ColourPicker from './ColourPicker/ColourPicker'
 import Body from './Body/Body'
 
 function App() {
