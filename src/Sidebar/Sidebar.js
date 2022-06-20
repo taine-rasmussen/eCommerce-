@@ -6,6 +6,7 @@ import { AdminContext } from '../AdminContext'
 import { IoLogoIonic } from 'react-icons/io'
 import { useContext } from 'react'
 import { FaRegEdit } from 'react-icons/fa'
+import { Link } from "react-router-dom";
 import './Sidebar.css'
 
 
@@ -49,14 +50,18 @@ const Sidebar = () => {
             <div className='sidebar_section' key={i}>
               {i === 0 ? <h2>DASHBOARD</h2> : i === 1 ? <h2>PAGES</h2> : <h2>APPS</h2>}
               {section.map((data) => (
-                <div className='sidebar_content' key={data.title}>
-                  <div className='sidebar_item'>
-                    {data.icon}
-                  </div>
-                  <div className='sidebar_item'>
-                    {data.title}
-                  </div>
-                </div>
+                <>
+                  <Link to={data.title.toLowerCase()}>
+                    <div className='sidebar_content' key={data.title}>
+                      <div className='sidebar_item'>
+                        {data.icon}
+                      </div>
+                      <div className='sidebar_item'>
+                        {data.title}
+                      </div>
+                    </div>
+                  </Link>
+                </>
               ))}
             </div>
           )

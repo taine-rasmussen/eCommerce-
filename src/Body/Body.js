@@ -13,7 +13,7 @@ const Body = () => {
    return (
       <div className='body'>
          <Routes>
-            <Route path="/" element={<Ecommerce />} />
+            <Route path="ecommerce" element={<Ecommerce />} />
             <Route path="orders" element={<Orders />} />
             <Route path="Employees" element={<Employees />} />
             <Route path="Customers" element={<Customers />} />
