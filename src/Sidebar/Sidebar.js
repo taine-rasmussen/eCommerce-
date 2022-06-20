@@ -1,11 +1,9 @@
-import React from 'react'
-import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { AiOutlineShoppingCart, AiOutlineCalendar, AiOutlineFormatPainter } from 'react-icons/ai'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { MdPeopleOutline } from 'react-icons/md'
 import { BsLayoutTextSidebarReverse, BsKanban } from 'react-icons/bs'
-import { FaRegEdit } from 'react-icons/fa'
+import { HiOutlineShoppingBag } from 'react-icons/hi'
+import { MdPeopleOutline } from 'react-icons/md'
 import { IoLogoIonic } from 'react-icons/io'
+import { FaRegEdit } from 'react-icons/fa'
 import './Sidebar.css'
 
 
@@ -32,18 +30,19 @@ const Sidebar = (props) => {
     ]
   ]
 
-
   return (
     <div className='sidebar_container'>
       <div className='sidebar_header'>
         <IoLogoIonic
-          style={{ fontSize: '2rem' }}
+          style={{ fontSize: '2rem', color: '#fb9677' }}
           onClick={() => setActiveMenu(!activeMenu)}
         />
         <h2>Shoppy</h2>
       </div>
       <div
         className='sidebar_menu_container'
+      // use state for titles to help with routing ??
+      // use  api to generate dummy data, names etc...
       >
         {sidebarData.map((section, i) => {
           return (

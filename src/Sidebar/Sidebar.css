@@ -41,7 +41,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
   border-radius: 10px;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .sidebar_content:hover {
-  background: blue;
+  background: #fb9677;
   transition: 0.5s;
   cursor: pointer;
 }
