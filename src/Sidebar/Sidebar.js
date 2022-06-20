@@ -26,7 +26,7 @@ const Sidebar = (props) => {
       { title: 'Calender', icon: <AiOutlineCalendar /> },
       { title: 'KanBan', icon: <BsKanban /> },
       { title: 'Editor', icon: <FaRegEdit /> },
-      { title: 'Orders', icon: <AiOutlineFormatPainter /> }
+      { title: 'Colour Picker', icon: <AiOutlineFormatPainter /> }
     ]
   ]
 
@@ -47,7 +47,7 @@ const Sidebar = (props) => {
         {sidebarData.map((section, i) => {
           return (
             <div className='sidebar_section' key={i}>
-              {i == 0 ? <h2>DASHBOARD</h2> : i == 1 ? <h2>PAGES</h2> : <h2>APPS</h2>}
+              {i === 0 ? <h2>DASHBOARD</h2> : i === 1 ? <h2>PAGES</h2> : <h2>APPS</h2>}
               {section.map((data) => (
                 <div className='sidebar_content' key={data.title}>
                   <div className='sidebar_item'>
