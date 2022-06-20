@@ -1,9 +1,12 @@
 import React from 'react'
+import SidebarHamburger from '../Sidebar/SidebarHamburger'
+
 
 const Ecommerce = () => {
    return (
       <div>
-         Ecom
+         <SidebarHamburger />
+         Ecommer
       </div>
    )
 }

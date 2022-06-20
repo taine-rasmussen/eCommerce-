@@ -1,32 +1,27 @@
 import { useState } from 'react'
 import './index.css'
 import Sidebar from './Sidebar/Sidebar'
-import SidebarHamburger from './Sidebar/SidebarHamburger'
 import Body from './Body/Body'
+import { AdminContext } from './AdminContext'
 
 function App() {
   const [activeMenu, setActiveMenu] = useState(true);
 
   return (
-    <div className="app">
-      {activeMenu
-        ? (
-          <Sidebar
-            setActiveMenu={setActiveMenu}
-            activeMenu={activeMenu}
-          />
-        ) : (
-          <div className="no_active_menu">
+    <AdminContext.Provider value={{ activeMenu, setActiveMenu }}>
+      <div className="app">
+        {activeMenu
+          ? (
+            <Sidebar />
+          ) : (
+            <div className="no_active_menu">
 
-          </div>
-        )
-      }
-      <Body />
-      <SidebarHamburger
-        activeMenu={activeMenu}
-        setActiveMenu={setActiveMenu}
-      />
-    </div >
+            </div>
+          )
+        }
+        <Body />
+      </div >
+    </AdminContext.Provider>
   );
 }
 
