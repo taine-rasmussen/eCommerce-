@@ -3,12 +3,11 @@ import SidebarHamburger from '../Sidebar/SidebarHamburger'
 
 
 const Ecommerce = () => {
-   return (
-      <div>
-         <SidebarHamburger />
+  return (
+    <div>
+      <SidebarHamburger />
          Ecommer
-      </div>
-   )
+    </div>
+  )
 }
-
 export default Ecommerce

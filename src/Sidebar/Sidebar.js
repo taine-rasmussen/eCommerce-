@@ -2,16 +2,18 @@ import { AiOutlineShoppingCart, AiOutlineCalendar, AiOutlineFormatPainter } from
 import { BsLayoutTextSidebarReverse, BsKanban } from 'react-icons/bs'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { MdPeopleOutline } from 'react-icons/md'
+import { AdminContext } from '../AdminContext'
 import { IoLogoIonic } from 'react-icons/io'
+import { useContext } from 'react'
 import { FaRegEdit } from 'react-icons/fa'
 import './Sidebar.css'
 
 
-const Sidebar = (props) => {
+const Sidebar = () => {
   const {
-    setActiveMenu,
-    activeMenu
-  } = props
+    activeMenu,
+    setActiveMenu
+  } = useContext(AdminContext)
 
   const sidebarData = [
     [
@@ -41,8 +43,6 @@ const Sidebar = (props) => {
       </div>
       <div
         className='sidebar_menu_container'
-      // use state for titles to help with routing ??
-      // use  api to generate dummy data, names etc...
       >
         {sidebarData.map((section, i) => {
           return (
