@@ -10,10 +10,14 @@ import KanBan from '../KanBan/KanBan'
 import Editor from '../Editor/Editor'
 import React from 'react'
 import './Body.css'
+import SidebarHamburger from '../Sidebar/SidebarHamburger'
 
 const Body = () => {
   return (
     <div className='body_container'>
+      <div>
+        <SidebarHamburger />
+      </div>
       <div className='body_body'>
         <Routes>
           <Route path="ecommerce" element={<Ecommerce />} />

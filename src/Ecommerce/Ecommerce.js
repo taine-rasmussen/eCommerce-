@@ -5,8 +5,7 @@ import React from 'react'
 const Ecommerce = () => {
   return (
     <div>
-      <SidebarHamburger />
-         Ecommer
+      Ecommer
     </div>
   )
 }
