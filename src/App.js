@@ -23,7 +23,14 @@ function App() {
           )
         }
         <Body />
-        <SettingsMenu />
+        {activeSettings
+          ? (
+            <SettingsMenu />
+          ) : (
+            <div className='no_active_menu'>
+
+            </div>
+          )}
       </div >
     </AdminContext.Provider>
   );
