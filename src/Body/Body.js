@@ -1,6 +1,8 @@
+import React, { useContext } from 'react'
 import SidebarHamburger from '../Sidebar/SidebarHamburger'
 import { Routes, Route } from "react-router-dom";
 import { FiSettings } from 'react-icons/fi'
+import { AdminContext } from '../AdminContext'
 import ColourPicker from '../ColourPicker/ColourPicker'
 import Ecommerce from '../Ecommerce/Ecommerce'
 import Customers from '../Customers/Customers'
@@ -9,10 +11,17 @@ import Calender from '../Calender/Calender'
 import Orders from '../Orders/Orders'
 import KanBan from '../KanBan/KanBan'
 import Editor from '../Editor/Editor'
-import React from 'react'
 import './Body.css'
 
+
 const Body = () => {
+
+  const {
+    activeSettings,
+    setActiveSettings
+  } = useContext(AdminContext)
+
+
   return (
     <div className='body_container'>
       <div className='body_header'>
@@ -31,7 +40,10 @@ const Body = () => {
         </Routes>
       </div>
       <div className="body_footer">
-        <FiSettings className='icon' />
+        <FiSettings
+          className='menu_icon'
+          onClick={() => { setActiveSettings(!activeSettings) }}
+        />
       </div>
     </div>
   )
