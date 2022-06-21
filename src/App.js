@@ -11,7 +11,7 @@ function App() {
   const [activeSettings, setActiveSettings] = useState(false)
 
   return (
-    <AdminContext.Provider value={{ activeMenu, setActiveMenu }}>
+    <AdminContext.Provider value={{ activeMenu, setActiveMenu, activeSettings, setActiveSettings }}>
       <div className="app">
         {activeMenu
           ? (
@@ -38,8 +38,9 @@ function App() {
 
 export default App;
 
-// Create settings menu component
-// Check how sidebar is setting width
-// render component conditionally using activeSettings
+// Create settings menu component: DONE
+// Check how sidebar is setting width: DONE
+// render component conditionally using activeSettings: DONE
+// toggle settings
 // Function that flips activeSettings - add it to state?
 // create state object? YT vid?
