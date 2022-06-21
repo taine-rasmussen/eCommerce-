@@ -1,18 +1,31 @@
+import { useContext, useCallback } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { AdminContext } from '../AdminContext'
-import { useContext } from 'react'
 
 const SidebarHamburger = () => {
   const {
     activeMenu,
-    setActiveMenu
+    setActiveMenu,
+    activeSettings,
+    setActiveSettings
   } = useContext(AdminContext);
+
+  const toggleSidebar = useCallback(
+    () => {
+      if (activeSettings) {
+        setActiveSettings(false);
+        setActiveMenu(!activeMenu);
+      } else {
+        setActiveMenu(!activeMenu);
+      }
+
+    }, [activeMenu])
 
   return (
     <>
       <GiHamburgerMenu
         className='menu_icon'
-        onClick={() => setActiveMenu(!activeMenu)}
+        onClick={toggleSidebar}
       />
     </>
   )
