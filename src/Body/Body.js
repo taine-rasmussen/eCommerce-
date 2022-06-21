@@ -1,5 +1,6 @@
-import { FiSettings } from 'react-icons/fi'
+import SidebarHamburger from '../Sidebar/SidebarHamburger'
 import { Routes, Route } from "react-router-dom";
+import { FiSettings } from 'react-icons/fi'
 import ColourPicker from '../ColourPicker/ColourPicker'
 import Ecommerce from '../Ecommerce/Ecommerce'
 import Customers from '../Customers/Customers'
@@ -10,12 +11,11 @@ import KanBan from '../KanBan/KanBan'
 import Editor from '../Editor/Editor'
 import React from 'react'
 import './Body.css'
-import SidebarHamburger from '../Sidebar/SidebarHamburger'
 
 const Body = () => {
   return (
     <div className='body_container'>
-      <div>
+      <div className='body_header'>
         <SidebarHamburger />
       </div>
       <div className='body_body'>
