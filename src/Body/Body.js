@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useCallback } from 'react'
 import SidebarHamburger from '../Sidebar/SidebarHamburger'
 import { Routes, Route } from "react-router-dom";
 import { FiSettings } from 'react-icons/fi'
@@ -18,9 +18,16 @@ const Body = () => {
 
   const {
     activeSettings,
-    setActiveSettings
+    setActiveSettings,
+    activeMenu,
+    setActiveMenu
   } = useContext(AdminContext)
 
+  const ToggleSettings = useCallback(
+    () => {
+      setActiveSettings(!activeSettings);
+      setActiveMenu(!activeMenu);
+    }, [activeMenu, activeSettings])
 
   return (
     <div className='body_container'>
@@ -42,7 +49,7 @@ const Body = () => {
       <div className="body_footer">
         <FiSettings
           className='menu_icon'
-          onClick={() => { setActiveSettings(!activeSettings) }}
+          onClick={ToggleSettings}
         />
       </div>
     </div>
