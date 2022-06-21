@@ -9,7 +9,6 @@ import { FaRegEdit } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 import './Sidebar.css'
 
-
 const Sidebar = () => {
   const {
     activeMenu,
