@@ -1,2 +1,10 @@
 import { createContext } from 'react'
-export const AdminContext = createContext('#')
+
+const context = {
+   example: true,
+   this: 'that',
+   age: 26,
+   theme: '#000'
+}
+
+export const AdminContext = createContext(context)

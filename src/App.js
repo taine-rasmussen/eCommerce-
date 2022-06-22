@@ -1,6 +1,6 @@
 import { AdminContext } from './AdminContext'
 import SettingsMenu from './SettingsMenu/SettingsMenu'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Sidebar from './Sidebar/Sidebar'
 import Body from './Body/Body'
 import './index.css'
