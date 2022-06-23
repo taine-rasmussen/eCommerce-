@@ -7,6 +7,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+ul {
+  list-style: none !important;
+}
+
 .app {
   height: 100vh;
   display: flex;
@@ -16,9 +20,23 @@ body {
 .menu_icon {
   margin: 25px 25px;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.menu_icon:hover {
+.settings_icon {
+  margin: 25px 25px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.settings_icon:hover {
+  transform: scale(1.1);
+  transition: 0.75s;
+}
+
+.icon {
   cursor: pointer;
 }
 
