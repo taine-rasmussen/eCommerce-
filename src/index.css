@@ -27,9 +27,13 @@ ul {
   margin: 25px 25px;
   font-size: 1.5rem;
   border-radius: 50%;
-  background: #fb9677;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
+}
+
+.settings_icon:hover {
+  transform: scale(1.1);
+  transition: 0.75s;
 }
 
 .icon {

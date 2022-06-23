@@ -53,6 +53,7 @@ const Body = () => {
         <FiSettings
           className='settings_icon'
           onClick={ToggleSettings}
+          style={{ background: '#fb9677' }}
         />
       </div>
     </div>

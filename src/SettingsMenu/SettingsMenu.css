@@ -70,5 +70,6 @@
 }
 
 .settings_colour:hover {
-  transition: 0.5s;
+  /* transform: scale(1.1);
+  transition: 0.5s; */
 }
