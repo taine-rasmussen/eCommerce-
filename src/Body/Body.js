@@ -31,8 +31,14 @@ const Body = () => {
 
   const ToggleSettings = useCallback(
     () => {
-      setActiveSettings(!activeSettings);
-      setActiveMenu(!activeMenu);
+      if (activeMenu) {
+        setActiveSettings(!activeSettings);
+        setActiveMenu(false);
+      } else {
+        setActiveSettings(!activeSettings);
+      }
+
+
     }, [activeMenu, activeSettings]);
 
 

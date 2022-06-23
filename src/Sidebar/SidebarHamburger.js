@@ -14,11 +14,10 @@ const SidebarHamburger = () => {
     () => {
       if (activeSettings) {
         setActiveSettings(false);
-        setActiveMenu(!activeMenu);
+        setActiveMenu(true);
       } else {
         setActiveMenu(!activeMenu);
       }
-
     }, [activeMenu])
 
   return (
