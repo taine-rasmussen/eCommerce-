@@ -16,19 +16,19 @@ body {
 .menu_icon {
   margin: 25px 25px;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.menu_icon:hover {
+.settings_icon {
+  margin: 25px 25px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background: #fb9677;
+  padding: 5px;
   cursor: pointer;
 }
 
 .icon {
-  border-radius: 50%;
-  background: cornflowerblue;
-  padding: 5px;
-}
-
-.icon:hover {
   cursor: pointer;
 }
 

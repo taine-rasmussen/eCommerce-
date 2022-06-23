@@ -51,7 +51,7 @@ const Body = () => {
       </div>
       <div className="body_footer">
         <FiSettings
-          className='menu_icon'
+          className='settings_icon'
           onClick={ToggleSettings}
         />
       </div>
