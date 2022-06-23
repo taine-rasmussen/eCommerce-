@@ -37,9 +37,3 @@ function App() {
 
 export default App;
 
-// Create settings menu component: DONE
-// Check how sidebar is setting width: DONE
-// render component conditionally using activeSettings: DONE
-// toggle settings
-// Function that flips activeSettings - add it to state?
-// create state object? YT vid?

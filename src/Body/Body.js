@@ -15,19 +15,12 @@ import './Body.css'
 
 
 const Body = () => {
-
-  const [appContext, setAppContext] = useState('')
-
   const {
     activeSettings,
     setActiveSettings,
     activeMenu,
     setActiveMenu
   } = useContext(AdminContext)
-
-  const test = useContext(AdminContext)
-
-
 
   const ToggleSettings = useCallback(
     () => {
@@ -37,17 +30,7 @@ const Body = () => {
       } else {
         setActiveSettings(!activeSettings);
       }
-
-
     }, [activeMenu, activeSettings]);
-
-
-  console.log(test)
-
-
-  useEffect(() => {
-    setAppContext(test);
-  }, [test])
 
   return (
     <div className='body_container'>
