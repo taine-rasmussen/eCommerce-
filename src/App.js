@@ -6,8 +6,8 @@ import Body from './Body/Body'
 import './index.css'
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState(true);
-  const [activeSettings, setActiveSettings] = useState(false)
+  const [activeMenu, setActiveMenu] = useState(false);
+  const [activeSettings, setActiveSettings] = useState(true)
 
   return (
     <AdminContext.Provider value={{ activeMenu, setActiveMenu, activeSettings, setActiveSettings }}>

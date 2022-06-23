@@ -22,6 +22,16 @@ body {
   cursor: pointer;
 }
 
+.icon {
+  border-radius: 50%;
+  background: cornflowerblue;
+  padding: 5px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
 .no_active_menu {
   width: 0;
 }
