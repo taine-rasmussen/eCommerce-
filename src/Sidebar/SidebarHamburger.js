@@ -18,7 +18,7 @@ const SidebarHamburger = () => {
       } else {
         setActiveMenu(!activeMenu);
       }
-    }, [activeMenu])
+    }, [activeMenu, activeSettings])
 
   return (
     <>
