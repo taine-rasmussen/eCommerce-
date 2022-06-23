@@ -14,7 +14,21 @@ const SettingsMenu = () => {
         </div>
       </div>
       <div className="settings_theme">
-
+        <div className="settings_theme_title">
+          <h2>Theme Options</h2>
+        </div>
+        <div className='settings_theme_options'>
+          <ul>
+            <li>
+              <input type="checkbox" />
+              <span class="checkmark">Light</span>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <span class="checkmark">Dark</span>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="settings_colours">
 
