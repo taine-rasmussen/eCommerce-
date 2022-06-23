@@ -3,6 +3,10 @@ import { AiOutlineCloseCircle } from 'react-icons/ai'
 import './SettingsMenu.css'
 
 const SettingsMenu = () => {
+
+  const themeColours = ['#000', '#000', '#000', '#000', '#000', '#000']
+
+
   return (
     <div className="settings_container">
       <div className="settings_header">
@@ -14,7 +18,7 @@ const SettingsMenu = () => {
         </div>
       </div>
       <div className="settings_theme">
-        <div className="settings_theme_title">
+        <div className="settings_title">
           <h2>Theme Options</h2>
         </div>
         <div className='settings_theme_options'>
@@ -31,7 +35,21 @@ const SettingsMenu = () => {
         </div>
       </div>
       <div className="settings_colours">
+        <div className="settings_title">
+          <h2>Theme Colours</h2>
+        </div>
+        <div className="settings_colours_container">
+          {themeColours.map((colour) => {
+            return (
+              <div
+                className="settings_colour"
+                style={{ background: colour }}
+              >
 
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
