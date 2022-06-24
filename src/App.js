@@ -9,8 +9,21 @@ function App() {
   const [activeMenu, setActiveMenu] = useState(true);
   const [activeSettings, setActiveSettings] = useState(false)
 
+  const handleToggle = (menu) => {
+    const settings = 'settings'
+    const sidebar = 'sidebar'
+    // setings modal
+
+    if (menu == sidebar) {
+      // handle sidebar close for all situations
+    } else if (menu == settings) {
+      // handle settings close for all situations
+    }
+    // add this to state pull it out where needed
+  }
+
   return (
-    <AdminContext.Provider value={{ activeMenu, setActiveMenu, activeSettings, setActiveSettings }}>
+    <AdminContext.Provider value={{ activeMenu, setActiveMenu, activeSettings, setActiveSettings, handleToggle }}>
       <div className="app">
         {activeMenu
           ? (
