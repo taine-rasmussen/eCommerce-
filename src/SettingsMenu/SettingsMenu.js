@@ -1,12 +1,12 @@
 import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { useContext, useState } from 'react'
 import { AdminContext } from '../AdminContext'
-import { useContext } from 'react'
 import './SettingsMenu.css'
 
 const SettingsMenu = () => {
 
   const {
-    setActiveSettings,
+    setActiveSettings
   } = useContext(AdminContext)
 
   const themeColours = ['#000', '#000', '#000', '#000', '#000', '#000']
@@ -32,11 +32,11 @@ const SettingsMenu = () => {
           <ul>
             <li>
               <input type="checkbox" />
-              <span class="checkmark">Light</span>
+              <span className="checkmark">Light</span>
             </li>
             <li>
               <input type="checkbox" />
-              <span class="checkmark">Dark</span>
+              <span className="checkmark">Dark</span>
             </li>
           </ul>
         </div>
@@ -50,15 +50,16 @@ const SettingsMenu = () => {
             return (
               <div
                 className="settings_colour"
+                key={colour}
                 style={{ background: colour }}
               >
-                {/* use state to decide what circle to have SVGCheck in */}
+                {/* {/* use state to decide what circle to have SVGCheck in */}
               </div>
             )
           })}
-        </div>
-      </div>
-    </div>
+        </div >
+      </div >
+    </div >
   )
 }
 
