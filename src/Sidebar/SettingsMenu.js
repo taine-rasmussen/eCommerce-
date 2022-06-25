@@ -1,5 +1,5 @@
-import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { useContext, useCallback } from 'react'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { AiOutlineCheck } from 'react-icons/ai'
 import { AdminContext } from '../AdminContext'
 import './SettingsMenu.css'
@@ -12,6 +12,19 @@ const SettingsMenu = () => {
     setTheme,
     theme
   } = useContext(AdminContext)
+
+  const updateActiveTheme = useCallback(
+    (newTheme) => {
+      theme.map((obj) => {
+        if (obj.colour = activeTheme) {
+          setTheme([...theme], obj.active = false)
+        }
+        if (obj.colour == newTheme.colour) {
+          setTheme([...theme], obj.active = true)
+        }
+      })
+    }, [theme, setTheme, activeTheme])
+
 
   return (
     <div className="settings_container">
@@ -60,7 +73,7 @@ const SettingsMenu = () => {
                 className="settings_colour"
                 key={colour}
                 style={{ background: colour }}
-              // onClick={updateTheme(colour)}
+                onClick={() => { updateActiveTheme(col) }}
               >
                 {active === true ? <AiOutlineCheck /> : null}
               </div>

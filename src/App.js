@@ -21,7 +21,7 @@ function App() {
   const activeTheme = useMemo(
     () => {
       return theme.filter(colour => colour.active === true)[0].colour
-    }, []
+    }, [theme, setTheme]
   )
 
   return (
