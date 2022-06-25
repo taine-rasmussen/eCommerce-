@@ -50,7 +50,11 @@ const SettingsMenu = () => {
         </div>
         <div className="settings_colours_container">
           {theme.map((col) => {
-            const { colour } = col
+            const {
+              colour,
+              active
+            } = col
+
             return (
               <div
                 className="settings_colour"
@@ -58,7 +62,7 @@ const SettingsMenu = () => {
                 style={{ background: colour }}
               // onClick={updateTheme(colour)}
               >
-                {theme[0].colour === colour ? <AiOutlineCheck /> : null}
+                {active === true ? <AiOutlineCheck /> : null}
               </div>
             )
           })}
