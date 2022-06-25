@@ -1,10 +1,9 @@
 import { AdminContext } from '../AdminContext'
 import { IoLogoIonic } from 'react-icons/io'
+import { useCallback } from 'react'
 import { FiSettings } from 'react-icons/fi'
 import { useContext } from 'react'
 import { Link } from "react-router-dom";
-
-
 
 const SidebarBody = (props) => {
 
@@ -18,6 +17,12 @@ const SidebarBody = (props) => {
     activeSettings,
     setActiveSettings
   } = useContext(AdminContext)
+
+  const toggleSettings = useCallback(
+    () => {
+      setActiveSettings(!activeSettings)
+    }, [activeSettings, setActiveSettings]
+  )
 
   return (
     <>
@@ -56,7 +61,9 @@ const SidebarBody = (props) => {
           )
         })}
       </div>
-      <FiSettings />
+      <FiSettings
+        onClick={toggleSettings}
+      />
     </>
   )
 }

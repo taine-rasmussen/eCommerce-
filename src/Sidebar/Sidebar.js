@@ -1,11 +1,11 @@
 import { AiOutlineShoppingCart, AiOutlineCalendar, AiOutlineFormatPainter } from 'react-icons/ai'
 import { BsLayoutTextSidebarReverse, BsKanban } from 'react-icons/bs'
+import { useContext, useCallback } from 'react'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { MdPeopleOutline } from 'react-icons/md'
 import { AdminContext } from '../AdminContext'
 import SidebarBody from './SidebarBody'
 import SettingsMenu from './SettingsMenu'
-import { useContext } from 'react'
 import { FaRegEdit } from 'react-icons/fa'
 import './Sidebar.css'
 
