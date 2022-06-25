@@ -55,7 +55,7 @@ const SettingsMenu = () => {
               <div
                 className="settings_colour"
                 key={colour}
-                style={{ background: activeTheme }}
+                style={{ background: colour }}
               // onClick={updateTheme(colour)}
               >
                 {theme[0].colour === colour ? <AiOutlineCheck /> : null}
