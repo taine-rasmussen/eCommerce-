@@ -28,13 +28,13 @@ function App() {
     <AdminContext.Provider
       value={
         {
-          activeMenu,
-          setActiveMenu,
-          activeSettings,
           setActiveSettings,
+          activeSettings,
+          setActiveMenu,
           activeTheme,
+          activeMenu,
+          setTheme,
           theme,
-          setTheme
         }
       }>
       <div className="app">

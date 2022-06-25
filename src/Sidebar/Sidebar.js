@@ -15,6 +15,7 @@ import './Sidebar.css'
 const Sidebar = () => {
   const {
     activeSettings,
+    activeTheme,
     theme
   } = useContext(AdminContext)
 
@@ -34,7 +35,7 @@ const Sidebar = () => {
       { title: 'Colour Picker', icon: <AiOutlineFormatPainter /> }
     ],
     [
-      { title: 'Settings', icon: <FiSettings style={{ color: theme }} /> }
+      { title: 'Settings', icon: <FiSettings style={{ color: activeTheme }} /> }
     ]
   ]
 

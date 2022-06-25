@@ -11,6 +11,7 @@ const SidebarBody = (props) => {
   const {
     theme,
     activeMenu,
+    activeTheme,
     setActiveMenu,
     activeSettings,
     setActiveSettings
@@ -26,7 +27,7 @@ const SidebarBody = (props) => {
     <>
       <div className='sidebar_header'>
         <IoLogoIonic
-          style={{ fontSize: '2rem', color: theme }}
+          style={{ fontSize: '2rem', color: activeTheme }}
           onClick={() => setActiveMenu(!activeMenu)}
         />
         <h2>Shoppy</h2>

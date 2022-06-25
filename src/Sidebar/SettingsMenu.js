@@ -8,16 +8,10 @@ const SettingsMenu = () => {
 
   const {
     setActiveSettings,
-    getActiveTheme,
+    activeTheme,
     setTheme,
     theme
   } = useContext(AdminContext)
-
-  // const updateTheme = useCallback(
-  //   (colour) => {
-  //     setTheme(colour)
-  //   }, [theme, setTheme]
-  // )
 
   return (
     <div className="settings_container">
@@ -29,7 +23,7 @@ const SettingsMenu = () => {
           <AiOutlineCloseCircle
             className="settings_icon"
             onClick={() => { setActiveSettings(false) }}
-            style={{ color: getActiveTheme ? getActiveTheme : '' }}
+            style={{ color: activeTheme }}
           />
         </div>
       </div>
@@ -61,7 +55,7 @@ const SettingsMenu = () => {
               <div
                 className="settings_colour"
                 key={colour}
-                style={{ background: colour }}
+                style={{ background: activeTheme }}
               // onClick={updateTheme(colour)}
               >
                 {theme[0].colour === colour ? <AiOutlineCheck /> : null}
