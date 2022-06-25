@@ -7,34 +7,18 @@ import './index.css'
 function App() {
   const [activeMenu, setActiveMenu] = useState(true);
   const [activeSettings, setActiveSettings] = useState(false)
-  const [
-    theme,
-    setTheme] = useState([
-      { colour: '#fb9677', active: false },
-      { colour: '#1E4DB6', active: false },
-      { colour: '#FF5B8E', active: true },
-      { colour: '#7351FF', active: false },
-      { colour: '#02C9D6', active: false },
-      { colour: '#1897F5', active: false },
-    ])
-
-  const activeTheme = useMemo(
-    () => {
-      return theme.filter(colour => colour.active === true)[0].colour
-    }, [theme, setTheme]
-  )
+  const [activeTheme, setActiveTheme] = useState('#FF5B8E')
 
   return (
     <AdminContext.Provider
       value={
         {
           setActiveSettings,
+          setActiveTheme,
           activeSettings,
           setActiveMenu,
           activeTheme,
-          activeMenu,
-          setTheme,
-          theme,
+          activeMenu
         }
       }>
       <div className="app">
