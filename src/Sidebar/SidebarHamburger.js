@@ -5,26 +5,20 @@ import { AdminContext } from '../AdminContext'
 const SidebarHamburger = () => {
   const {
     activeMenu,
-    setActiveMenu,
-    activeSettings,
-    setActiveSettings
+    setActiveMenu
   } = useContext(AdminContext);
 
   const toggleSidebar = useCallback(
     () => {
-      if (activeSettings) {
-        setActiveSettings(false);
-        setActiveMenu(true);
-      } else {
-        setActiveMenu(!activeMenu);
-      }
-    }, [activeMenu, activeSettings])
+      setActiveMenu(!activeMenu);
+    }, [activeMenu])
 
   return (
     <>
       <GiHamburgerMenu
         className='menu_icon'
         onClick={toggleSidebar}
+        style={{ color: '#FF5B8E' }}
       />
     </>
   )

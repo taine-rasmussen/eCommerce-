@@ -19,7 +19,7 @@ const SettingsMenu = () => {
         </div>
         <div className="settings_header_icon">
           <AiOutlineCloseCircle
-            className="icon"
+            className="settings_icon"
             onClick={() => { setActiveSettings(false) }}
           />
         </div>
