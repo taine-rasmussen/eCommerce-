@@ -1,4 +1,4 @@
-import React, { useContext, useCallback, useEffect, useState } from 'react'
+import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import SidebarHamburger from '../Sidebar/SidebarHamburger'
 import ColourPicker from '../ColourPicker/ColourPicker'
