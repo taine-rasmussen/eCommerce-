@@ -1,15 +1,24 @@
 import { AiOutlineCloseCircle } from 'react-icons/ai'
-import { useContext, useState } from 'react'
+import { useContext, useCallback } from 'react'
+import { AiOutlineCheck } from 'react-icons/ai'
 import { AdminContext } from '../AdminContext'
 import './SettingsMenu.css'
 
 const SettingsMenu = () => {
 
   const {
-    setActiveSettings
+    setActiveSettings,
+    setTheme,
+    theme
   } = useContext(AdminContext)
 
-  const themeColours = ['#000', '#000', '#000', '#000', '#000', '#000']
+  const themeColours = ['#fb9677', '#1E4DB6', '#FF5B8E', '#7351FF', '#02C9D6', '#1897F5'];
+
+  const updateTheme = useCallback(
+    (colour) => {
+      setTheme(colour)
+    }, [theme, setTheme]
+  )
 
   return (
     <div className="settings_container">
@@ -21,6 +30,7 @@ const SettingsMenu = () => {
           <AiOutlineCloseCircle
             className="settings_icon"
             onClick={() => { setActiveSettings(false) }}
+            style={{ color: theme }}
           />
         </div>
       </div>
@@ -52,8 +62,9 @@ const SettingsMenu = () => {
                 className="settings_colour"
                 key={colour}
                 style={{ background: colour }}
+                onClick={(colour) => { updateTheme(colour) }}
               >
-                {/* {/* use state to decide what circle to have SVGCheck in */}
+                {theme === colour ? <AiOutlineCheck /> : null}
               </div>
             )
           })}

@@ -1,7 +1,6 @@
+import { useCallback, useContext, useState } from 'react'
 import { AdminContext } from '../AdminContext'
 import { IoLogoIonic } from 'react-icons/io'
-import { useCallback } from 'react'
-import { useContext } from 'react'
 import { Link } from "react-router-dom";
 
 const SidebarBody = (props) => {
@@ -10,6 +9,7 @@ const SidebarBody = (props) => {
   } = props;
 
   const {
+    theme,
     activeMenu,
     setActiveMenu,
     activeSettings,
@@ -26,7 +26,7 @@ const SidebarBody = (props) => {
     <>
       <div className='sidebar_header'>
         <IoLogoIonic
-          style={{ fontSize: '2rem', color: '#fb9677' }}
+          style={{ fontSize: '2rem', color: theme }}
           onClick={() => setActiveMenu(!activeMenu)}
         />
         <h2>Shoppy</h2>
