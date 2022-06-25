@@ -7,7 +7,16 @@ import './index.css'
 function App() {
   const [activeMenu, setActiveMenu] = useState(true);
   const [activeSettings, setActiveSettings] = useState(false)
-  const [theme, setTheme] = useState('#fb9677')
+  const [
+    theme,
+    setTheme] = useState([
+      { colour: '#fb9677', active: false },
+      { colour: '#1E4DB6', active: false },
+      { colour: '#FF5B8E', active: true },
+      { colour: '#7351FF', active: false },
+      { colour: '#02C9D6', active: false },
+      { colour: '#1897F5', active: false },
+    ])
 
   return (
     <AdminContext.Provider

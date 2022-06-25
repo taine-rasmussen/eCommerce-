@@ -12,8 +12,6 @@ const SettingsMenu = () => {
     theme
   } = useContext(AdminContext)
 
-  const themeColours = ['#fb9677', '#1E4DB6', '#FF5B8E', '#7351FF', '#02C9D6', '#1897F5'];
-
   const updateTheme = useCallback(
     (colour) => {
       setTheme(colour)
@@ -62,7 +60,7 @@ const SettingsMenu = () => {
                 className="settings_colour"
                 key={colour}
                 style={{ background: colour }}
-                onClick={(colour) => { updateTheme(colour) }}
+                onClick={updateTheme(colour)}
               >
                 {theme === colour ? <AiOutlineCheck /> : null}
               </div>
