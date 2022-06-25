@@ -1,5 +1,5 @@
 import { AdminContext } from './AdminContext'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Sidebar from './Sidebar/Sidebar'
 import Body from './Body/Body'
 import './index.css'
@@ -18,6 +18,12 @@ function App() {
       { colour: '#1897F5', active: false },
     ])
 
+  const activeTheme = useMemo(
+    () => {
+      return theme.filter(colour => colour.active === true)[0].colour
+    }, []
+  )
+
   return (
     <AdminContext.Provider
       value={
@@ -26,6 +32,7 @@ function App() {
           setActiveMenu,
           activeSettings,
           setActiveSettings,
+          activeTheme,
           theme,
           setTheme
         }
