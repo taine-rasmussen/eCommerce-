@@ -1,7 +1,6 @@
 import { AdminContext } from '../AdminContext'
 import { IoLogoIonic } from 'react-icons/io'
 import { useCallback } from 'react'
-import { FiSettings } from 'react-icons/fi'
 import { useContext } from 'react'
 import { Link } from "react-router-dom";
 
@@ -39,7 +38,10 @@ const SidebarBody = (props) => {
         {sidebarData.map((section, i) => {
           return (
             <div className='sidebar_section' key={i}>
-              {i === 0 ? <h2>DASHBOARD</h2> : i === 1 ? <h2>PAGES</h2> : <h2>APPS</h2>}
+              { i === 0 ? <h2>DASHBOARD</h2> : null}
+              { i === 1 ? <h2>PAGES</h2> : null}
+              { i === 2 ? <h2>APPS</h2> : null}
+              { i === 3 ? <h2>SETTINGS</h2> : null}
               {section.map((data) => (
                 <>
                   <Link
@@ -61,9 +63,6 @@ const SidebarBody = (props) => {
           )
         })}
       </div>
-      <FiSettings
-        onClick={toggleSettings}
-      />
     </>
   )
 }

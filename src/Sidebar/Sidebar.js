@@ -4,6 +4,7 @@ import { useContext, useCallback } from 'react'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { MdPeopleOutline } from 'react-icons/md'
 import { AdminContext } from '../AdminContext'
+import { FiSettings } from 'react-icons/fi'
 import SidebarBody from './SidebarBody'
 import SettingsMenu from './SettingsMenu'
 import { FaRegEdit } from 'react-icons/fa'
@@ -33,6 +34,9 @@ const Sidebar = () => {
       { title: 'KanBan', icon: <BsKanban /> },
       { title: 'Editor', icon: <FaRegEdit /> },
       { title: 'Colour Picker', icon: <AiOutlineFormatPainter /> }
+    ],
+    [
+      { title: 'Settings', icon: <FiSettings /> }
     ]
   ]
 
