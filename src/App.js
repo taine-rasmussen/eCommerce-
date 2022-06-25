@@ -9,7 +9,15 @@ function App() {
   const [activeSettings, setActiveSettings] = useState(false)
 
   return (
-    <AdminContext.Provider value={{ activeMenu, setActiveMenu, activeSettings, setActiveSettings }}>
+    <AdminContext.Provider
+      value={
+        {
+          activeMenu,
+          setActiveMenu,
+          activeSettings,
+          setActiveSettings
+        }
+      }>
       <div className="app">
         {activeMenu
           ? (
