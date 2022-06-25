@@ -5,9 +5,7 @@ import { AdminContext } from '../AdminContext'
 const SidebarHamburger = () => {
   const {
     activeMenu,
-    setActiveMenu,
-    activeSettings,
-    setActiveSettings
+    setActiveMenu
   } = useContext(AdminContext);
 
   const toggleSidebar = useCallback(

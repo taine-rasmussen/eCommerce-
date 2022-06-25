@@ -14,10 +14,7 @@ import './Sidebar.css'
 
 const Sidebar = () => {
   const {
-    activeMenu,
-    setActiveMenu,
     activeSettings,
-    setActiveSettings
   } = useContext(AdminContext)
 
   const sidebarData = [

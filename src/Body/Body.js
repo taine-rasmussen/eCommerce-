@@ -1,7 +1,6 @@
 import React, { useContext, useCallback, useEffect, useState } from 'react'
 import { Routes, Route } from "react-router-dom";
 import SidebarHamburger from '../Sidebar/SidebarHamburger'
-import { AdminContext } from '../AdminContext'
 import ColourPicker from '../ColourPicker/ColourPicker'
 import Ecommerce from '../Ecommerce/Ecommerce'
 import Customers from '../Customers/Customers'

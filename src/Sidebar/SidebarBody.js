@@ -5,7 +5,6 @@ import { useContext } from 'react'
 import { Link } from "react-router-dom";
 
 const SidebarBody = (props) => {
-
   const {
     sidebarData
   } = props;
