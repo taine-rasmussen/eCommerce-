@@ -1,7 +1,6 @@
 import React, { useContext, useCallback, useEffect, useState } from 'react'
-import SidebarHamburger from '../Sidebar/SidebarHamburger'
 import { Routes, Route } from "react-router-dom";
-import { FiSettings } from 'react-icons/fi'
+import SidebarHamburger from '../Sidebar/SidebarHamburger'
 import { AdminContext } from '../AdminContext'
 import ColourPicker from '../ColourPicker/ColourPicker'
 import Ecommerce from '../Ecommerce/Ecommerce'
@@ -13,24 +12,7 @@ import KanBan from '../KanBan/KanBan'
 import Editor from '../Editor/Editor'
 import './Body.css'
 
-
 const Body = () => {
-  const {
-    activeSettings,
-    setActiveSettings,
-    activeMenu,
-    setActiveMenu
-  } = useContext(AdminContext)
-
-  const ToggleSettings = useCallback(
-    () => {
-      if (activeMenu) {
-        setActiveSettings(!activeSettings);
-        setActiveMenu(false);
-      } else {
-        setActiveSettings(!activeSettings);
-      }
-    }, [activeMenu, activeSettings]);
 
   return (
     <div className='body_container'>
@@ -48,13 +30,6 @@ const Body = () => {
           <Route path="Editor" element={<Editor />} />
           <Route path="ColourPicker" element={<ColourPicker />} />
         </Routes>
-      </div>
-      <div className="body_footer">
-        <FiSettings
-          className='settings_icon'
-          onClick={ToggleSettings}
-          style={{ background: '#fb9677' }}
-        />
       </div>
     </div>
   )
