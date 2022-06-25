@@ -10,7 +10,7 @@ function App() {
   const [activeSettings, setActiveSettings] = useState(false)
 
   return (
-    <AdminContext.Provider value={{ activeMenu, setActiveMenu, activeSettings, setActiveSettings, handleToggle }}>
+    <AdminContext.Provider value={{ activeMenu, setActiveMenu, activeSettings, setActiveSettings }}>
       <div className="app">
         {activeMenu
           ? (
@@ -22,14 +22,6 @@ function App() {
           )
         }
         <Body />
-        {activeSettings
-          ? (
-            <SettingsMenu />
-          ) : (
-            <div className='no_active_menu'>
-
-            </div>
-          )}
       </div >
     </AdminContext.Provider>
   );
