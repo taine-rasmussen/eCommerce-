@@ -59,7 +59,6 @@ const SidebarBody = (props) => {
                     </div>
                   )
                 }
-
                 return (
                   <>
                     <Link
