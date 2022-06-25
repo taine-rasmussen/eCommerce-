@@ -7,6 +7,7 @@ import './index.css'
 function App() {
   const [activeMenu, setActiveMenu] = useState(true);
   const [activeSettings, setActiveSettings] = useState(false)
+  const [theme, setTheme] = useState('#fb9677')
 
   return (
     <AdminContext.Provider
@@ -15,7 +16,9 @@ function App() {
           activeMenu,
           setActiveMenu,
           activeSettings,
-          setActiveSettings
+          setActiveSettings,
+          theme,
+          setTheme
         }
       }>
       <div className="app">
