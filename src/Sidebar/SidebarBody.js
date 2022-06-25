@@ -42,13 +42,14 @@ const SidebarBody = (props) => {
               { i === 1 ? <h2>PAGES</h2> : null}
               { i === 2 ? <h2>APPS</h2> : null}
               { i === 3 ? <h2>SETTINGS</h2> : null}
-              {section.map((data) => (
-                <>
-                  <Link
-                    to={data.title.toLowerCase()}
-                    style={{ textDecoration: 'none' }}
-                  >
-                    <div className='sidebar_content' key={data.title}>
+              {section.map((data) => {
+                if (data.title == 'Settings') {
+                  return (
+                    <div
+                      className='sidebar_content'
+                      onClick={toggleSettings}
+                      key={data.title}
+                    >
                       <div className='sidebar_item'>
                         {data.icon}
                       </div>
@@ -56,9 +57,27 @@ const SidebarBody = (props) => {
                         {data.title}
                       </div>
                     </div>
-                  </Link>
-                </>
-              ))}
+                  )
+                }
+
+                return (
+                  <>
+                    <Link
+                      to={data.title.toLowerCase()}
+                      style={{ textDecoration: 'none' }}
+                    >
+                      <div className='sidebar_content' key={data.title}>
+                        <div className='sidebar_item'>
+                          {data.icon}
+                        </div>
+                        <div className='sidebar_item'>
+                          {data.title}
+                        </div>
+                      </div>
+                    </Link>
+                  </>
+                )
+              })}
             </div>
           )
         })}
