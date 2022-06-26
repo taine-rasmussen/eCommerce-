@@ -1,4 +1,4 @@
-import { useContext, useCallback } from 'react'
+import { useContext, useCallback, useMemo } from 'react'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { AiOutlineCheck } from 'react-icons/ai'
 import { AdminContext } from '../AdminContext'
@@ -13,13 +13,13 @@ const SettingsMenu = () => {
   } = useContext(AdminContext)
 
   const colours = ['#fb9677', '#1E4DB6', '#FF5B8E', '#7351FF', '#02C9D6', '#1897F5']
+  const colourHover = ['orange', 'dark_blue', 'pink', 'purple', 'green', 'light_blue']
 
   const updateActiveTheme = useCallback(
     (colour) => {
       setActiveTheme(colour)
     }, [activeTheme]
   )
-
 
   return (
     <div className="settings_container">
@@ -58,8 +58,6 @@ const SettingsMenu = () => {
         </div>
         <div className="settings_colours_container">
           {colours.map((colour) => {
-
-
             return (
               <div
                 className="settings_colour"
