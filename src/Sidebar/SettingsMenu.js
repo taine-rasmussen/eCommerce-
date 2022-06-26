@@ -1,4 +1,4 @@
-import { useContext, useCallback } from 'react'
+import { useContext, useCallback, useMemo } from 'react'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { AiOutlineCheck } from 'react-icons/ai'
 import { AdminContext } from '../AdminContext'
@@ -9,22 +9,17 @@ const SettingsMenu = () => {
   const {
     setActiveSettings,
     activeTheme,
-    setTheme,
-    theme
+    setActiveTheme,
   } = useContext(AdminContext)
 
-  const updateActiveTheme = useCallback(
-    (newTheme) => {
-      theme.map((obj) => {
-        if (obj.colour = activeTheme) {
-          setTheme([...theme], obj.active = false)
-        }
-        if (obj.colour == newTheme.colour) {
-          setTheme([...theme], obj.active = true)
-        }
-      })
-    }, [theme, setTheme, activeTheme])
+  const colours = ['#fb9677', '#1E4DB6', '#FF5B8E', '#7351FF', '#02C9D6', '#1897F5']
+  const colourHover = ['orange', 'dark_blue', 'pink', 'purple', 'green', 'light_blue']
 
+  const updateActiveTheme = useCallback(
+    (colour) => {
+      setActiveTheme(colour)
+    }, [activeTheme]
+  )
 
   return (
     <div className="settings_container">
@@ -62,20 +57,15 @@ const SettingsMenu = () => {
           <h2>Theme Colours</h2>
         </div>
         <div className="settings_colours_container">
-          {theme.map((col) => {
-            const {
-              colour,
-              active
-            } = col
-
+          {colours.map((colour) => {
             return (
               <div
                 className="settings_colour"
                 key={colour}
                 style={{ background: colour }}
-                onClick={() => { updateActiveTheme(col) }}
+                onClick={() => { updateActiveTheme(colour) }}
               >
-                {active === true ? <AiOutlineCheck /> : null}
+                {colour === activeTheme ? <AiOutlineCheck /> : null}
               </div>
             )
           })}

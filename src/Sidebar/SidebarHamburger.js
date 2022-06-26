@@ -6,7 +6,7 @@ const SidebarHamburger = () => {
   const {
     activeMenu,
     setActiveMenu,
-    theme
+    activeTheme
   } = useContext(AdminContext);
 
   const toggleSidebar = useCallback(
@@ -19,7 +19,7 @@ const SidebarHamburger = () => {
       <GiHamburgerMenu
         className='menu_icon'
         onClick={toggleSidebar}
-        style={{ color: theme }}
+        style={{ color: activeTheme }}
       />
     </>
   )
