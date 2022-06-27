@@ -54,7 +54,7 @@
 }
 
 .sidebar_content:hover {
-  background: #fb9677;
+  background: #7d7d7d;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -64,28 +64,4 @@
   display: flex;
   padding: 20px 20px;
   font-size: 1.5rem;
-}
-
-.orange:hover {
-  background: #fb9677;
-}
-
-.dark_blue:hover {
-  background: #1e4db6;
-}
-
-.pink:hover {
-  background: #ff5b8e;
-}
-
-.purple:hover {
-  background: #7351ff;
-}
-
-.green:hover {
-  background: #02c9d6;
-}
-
-.light_blue:hover {
-  background: #1897f5;
 }
