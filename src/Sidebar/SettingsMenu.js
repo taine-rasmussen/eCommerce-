@@ -13,7 +13,6 @@ const SettingsMenu = () => {
   } = useContext(AdminContext)
 
   const colours = ['#fb9677', '#1E4DB6', '#FF5B8E', '#7351FF', '#02C9D6', '#1897F5']
-  const colourHover = ['orange', 'dark_blue', 'pink', 'purple', 'green', 'light_blue']
 
   const updateActiveTheme = useCallback(
     (colour) => {
