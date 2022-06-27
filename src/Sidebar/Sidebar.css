@@ -54,7 +54,7 @@
 }
 
 .sidebar_content:hover {
-  background: #7d7d7d;
+  background: #d0cfcf;
   transition: 0.5s;
   cursor: pointer;
 }
