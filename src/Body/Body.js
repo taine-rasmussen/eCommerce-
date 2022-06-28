@@ -25,7 +25,7 @@ const Body = () => {
           <Route path="Employees" element={<Employees />} />
           <Route path="Customers" element={<Customers />} />
           <Route path="Calender" element={<Calender />} />
-          <Route path="KanBan" element={<KanBan />} />
+          <Route path="kanBan" element={<KanBan />} />
           <Route path="Editor" element={<Editor />} />
           <Route path="ColourPicker" element={<ColourPicker />} />
         </Routes>
