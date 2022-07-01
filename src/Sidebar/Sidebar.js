@@ -2,6 +2,7 @@ import { AiOutlineShoppingCart, AiOutlineCalendar, AiOutlineFormatPainter } from
 import { BsLayoutTextSidebarReverse, BsKanban } from 'react-icons/bs'
 import { useContext, useCallback } from 'react'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
+import { BsFileEarmarkMusic } from 'react-icons/bs'
 import { MdPeopleOutline } from 'react-icons/md'
 import { AdminContext } from '../AdminContext'
 import { FiSettings } from 'react-icons/fi'
@@ -24,12 +25,12 @@ const Sidebar = () => {
       { title: 'Ecommerce', icon: <HiOutlineShoppingBag /> }
     ],
     [
-      { title: 'Orders', icon: <AiOutlineShoppingCart /> },
+      { title: 'Calender', icon: <AiOutlineCalendar /> },
       { title: 'Employees', icon: <MdPeopleOutline /> },
       { title: 'Customers', icon: <BsLayoutTextSidebarReverse /> }
     ],
     [
-      { title: 'Calender', icon: <AiOutlineCalendar /> },
+      { title: 'Music', icon: <BsFileEarmarkMusic /> },
       { title: 'KanBan', icon: <BsKanban /> },
       { title: 'Editor', icon: <FaRegEdit /> },
       { title: 'Colour Picker', icon: <AiOutlineFormatPainter /> }
