@@ -6,7 +6,7 @@ import Ecommerce from '../Ecommerce/Ecommerce'
 import Customers from '../Customers/Customers'
 import Employees from '../Employees/Employees'
 import Calender from '../Calender/Calender'
-import Orders from '../Orders/Orders'
+import Music from '../MusicPlayer/MusicPlayer'
 import KanBan from '../KanBan/KanBan'
 import Editor from '../Editor/Editor'
 import './Body.css'
@@ -21,7 +21,7 @@ const Body = () => {
       <div className='body_body'>
         <Routes>
           <Route path="ecommerce" element={<Ecommerce />} />
-          <Route path="orders" element={<Orders />} />
+          <Route path="Music" element={<Music />} />
           <Route path="Employees" element={<Employees />} />
           <Route path="Customers" element={<Customers />} />
           <Route path="Calender" element={<Calender />} />
